@@ -17,3 +17,11 @@ for entity in document.ents:
 
 ### do the py install above 
 
+from pathlib import Path
+
+document1= nlp(Path('RomeoAndJuliet.txt').read_text())
+document2= nlp(Path('EdwardTheSecond.txt').read_text())
+
+###helps us figure out similar words
+
+print(document1.similarity(document2))
